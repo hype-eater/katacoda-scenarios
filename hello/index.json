@@ -39,6 +39,7 @@
     "imageid": "kubernetes-cluster-running:1.18"
   },
   "environment": {
-    "uilayout": "editor-terminal"
+    "hideHiddenFiles": true,
+    "uilayout": "terminal"
   }
 }
