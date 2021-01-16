@@ -19,5 +19,3 @@ ONBUILD RUN echo "$CUSTOM_WORD" >> things.txt
 Build the Docker image:
 ```docker build -t my-onbuild base```{{execute}}
 
-Run the Docker image:
-```docker run --rm my-onbuild```{{execute}}
