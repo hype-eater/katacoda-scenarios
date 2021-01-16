@@ -6,14 +6,22 @@
   "details": {
     "steps": [
       {
-        "title": "The base image",
+        "title": "Build the base image",
         "text": "step1.md",
         "code": "setup1.sh"
       },
       {
+        "title": "About the base image",
+        "text": "step2.md"
+      },
+      {
         "title": "A downstream image",
-        "text": "step2.md",
-        "code": "setup2.sh"
+        "text": "step3.md",
+        "code": "setup3.sh"
+      },
+      {
+        "title": "Test",
+        "text": "step4.md"
       }
     ],
     "intro": {
@@ -26,12 +34,14 @@
   "environment": {
     "hideHiddenFiles": true,
     "uilayout": "editor-terminal",
-    "uisettings": "Dockerfile"
+    "uisettings": "Dockerfile",
+    "uieditorpath": "/root"
   },
   "backend": {
     "imageid": "ubuntu"
   },
   "files": [
-    "base/Dockerfile"
+    "base/Dockerfile",
+    "downstream/Dockerfile"
   ]
 }
