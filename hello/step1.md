@@ -1,3 +1,3 @@
 ```shell
-launch.sh
+echo "no launch"
 ```{{execute}}
