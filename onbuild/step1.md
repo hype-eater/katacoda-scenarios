@@ -17,5 +17,7 @@ ONBUILD RUN echo "$CUSTOM_WORD" >> things.txt
 </pre>
 
 Build the Docker image:
-```docker build -t my-onbuild base```{{execute}}
+```
+docker build -t my-onbuild base
+```{{ exec }}
 
