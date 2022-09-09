@@ -1,16 +1,17 @@
-Create the Dockerfile for a "downstream" image.
-`downstream/Dockerfile`{{open}}
-
-Include a FROM instruction that refers to the base image we just built.
-<pre class="file" data-filename="downstream/Dockerfile" data-target="replace">
-FROM my-onbuild
-RUN echo "three" >> things.txt
-</pre>
+Now, build another "downstream" image that uses the same base we built earlier.
+By specifying build args, we'll impact the behavior of the ONBUILD instructions.
+Even though the ONBUILD instructions are embedded in the previously-built base image,
+they don't run until the downstream build, so the context of the downstream build affects
+the outcomes of the ONBUILD instructions.
 
 
 Build the image.
-`docker build —t my-downstream downstream`{{execute}}
+```
+docker build --build-arg CUSTOM_WORD=bananas -t my-other-downstream /downstream
+```{{execute}}
 
 
 Run a container
-`docker run --rm my-downstream`{{execute}}
+```
+docker run --rm my-other-downstream
+```{{execute}}

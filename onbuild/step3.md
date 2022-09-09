@@ -6,8 +6,12 @@ RUN echo "three" >> things.txt
 
 
 Build the image.
-`docker build —t my-downstream downstream`{{execute}}
+```
+docker build -t my-downstream /downstream/
+```{{execute}}
 
 
 Run a container
-`docker run --rm my-downstream`{{execute}}
+```
+docker run --rm my-downstream
+```{{execute}}

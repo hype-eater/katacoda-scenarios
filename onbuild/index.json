@@ -7,8 +7,13 @@
     "assets": {
       "host01": [
         {
-          "file": "basic/Dockerfile",
-          "target": "~/",
+          "file": "base/Dockerfile",
+          "target": "/base",
+          "chmod": "+w"
+        },
+        {
+          "file": "downstream/Dockerfile",
+          "target": "/downstream",
           "chmod": "+w"
         }
       ]
@@ -16,8 +21,7 @@
     "steps": [
       {
         "title": "Build the base image",
-        "text": "step1.md",
-        "code": "setup1.sh"
+        "text": "step1.md"
       },
       {
         "title": "About the base image",
@@ -25,11 +29,10 @@
       },
       {
         "title": "A downstream image",
-        "text": "step3.md",
-        "code": "setup3.sh"
+        "text": "step3.md"
       },
       {
-        "title": "Test",
+        "title": "Another downstream image",
         "text": "step4.md"
       }
     ],
@@ -52,5 +55,8 @@
   "files": [
     "base/Dockerfile",
     "downstream/Dockerfile"
-  ]
+  ],
+  "interface": {
+    "layout": "ide"
+  }
 }

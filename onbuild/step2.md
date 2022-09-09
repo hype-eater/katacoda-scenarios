@@ -1,10 +1,12 @@
-The base image `my-onbuild` that we just built is the result
+The base image `my-onbuild`{{}} that we just built is the result
 of all of the non-ONBUILD instructions in the Dockerfile and
 any container from that image will behave the same as if
 the image had no ONBUILD instructions at all.
 
-Run the Docker image we just 
-```docker run --rm my-onbuild```{{execute}}
+Run the Docker image we just built:
+```
+docker run --rm my-onbuild
+```{{execute}}
 
 
 
