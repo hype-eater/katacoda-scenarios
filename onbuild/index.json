@@ -4,6 +4,12 @@
   "difficulty": "Intermediate",
   "time": "20 minutes",
   "details": {
+        "assets": {
+      "host01": [
+        {"file": "basic/Dockerfile", "target": "~/", "chmod": "+w"}
+      ]
+    }
+  },
     "steps": [
       {
         "title": "Build the base image",
